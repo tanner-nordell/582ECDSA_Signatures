@@ -19,7 +19,7 @@ def sign(m):
     # generate signature
     # Your code here
 
-    (r, s) = fastecdsa.ecdsa.sign(m, d, curve1, sha256, false)
+    (r, s) = fastecdsa.ecdsa.sign(m, d, curve1, sha256, False)
 
     assert isinstance(public_key, point.Point)
     assert isinstance(r, int)

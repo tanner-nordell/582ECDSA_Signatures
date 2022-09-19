@@ -6,8 +6,8 @@ from hashlib import sha256
 
 
 def sign(m):
-    curve = curve.secp256k1
-    keysTuple = fastecdsa.keys.gen_keypair(curve)
+    curve1 = curve.secp256k1
+    keysTuple = fastecdsa.keys.gen_keypair(curve1)
     # generate public key
     # Your code here
     public_key = keysTuple[1]  # public_key = Q = dG
@@ -17,7 +17,7 @@ def sign(m):
     # generate signature
     # Your code here
 
-    (r, s) = fastecdsa.ecdsa.sign(m, d, curve, sha256, false)
+    (r, s) = fastecdsa.ecdsa.sign(m, d, curve1, sha256, false)
 
     assert isinstance(public_key, point.Point)
     assert isinstance(r, int)

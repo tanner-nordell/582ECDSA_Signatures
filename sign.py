@@ -1,3 +1,5 @@
+import fastecdsa
+
 from fastecdsa.curve import secp256k1
 from fastecdsa.keys import export_key, gen_keypair
 
